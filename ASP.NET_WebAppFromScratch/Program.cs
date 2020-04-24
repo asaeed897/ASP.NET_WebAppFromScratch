@@ -22,5 +22,6 @@ namespace ASP.NET_WebAppFromScratch
                 {
                     webBuilder.UseStartup<Startup>();
                 });
+        // Lesson 1 to 5
     }
 }
