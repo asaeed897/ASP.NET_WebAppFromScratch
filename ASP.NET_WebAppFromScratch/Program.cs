@@ -22,6 +22,6 @@ namespace ASP.NET_WebAppFromScratch
                 {
                     webBuilder.UseStartup<Startup>();
                 });
-        // 7. OutOfProcess Hosting
+        // 8. LaunchSettings json file
     }
 }
