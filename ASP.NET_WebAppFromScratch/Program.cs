@@ -22,6 +22,6 @@ namespace ASP.NET_WebAppFromScratch
                 {
                     webBuilder.UseStartup<Startup>();
                 });
-        // 6. InProcess Hosting
+        // 7. OutOfProcess Hosting
     }
 }
