@@ -22,6 +22,6 @@ namespace ASP.NET_WebAppFromScratch
                 {
                     webBuilder.UseStartup<Startup>();
                 });
-        // 8. LaunchSettings json file
+        // 9. AppSettings json file
     }
 }
