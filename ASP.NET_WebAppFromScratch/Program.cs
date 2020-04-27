@@ -22,6 +22,6 @@ namespace ASP.NET_WebAppFromScratch
                 {
                     webBuilder.UseStartup<Startup>();
                 });
-        // 9. AppSettings json file
+        // 10. Middleware Components
     }
 }
