@@ -30,26 +30,19 @@ namespace ASP.NET_WebAppFromScratch
         {
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();
+                DeveloperExceptionPageOptions developerExceptionPageOptions = new DeveloperExceptionPageOptions();
+                developerExceptionPageOptions.SourceCodeLineCount = 10;
+                app.UseDeveloperExceptionPage(developerExceptionPageOptions);
             }
 
-            DefaultFilesOptions defaultFilesOptions = new DefaultFilesOptions();
-            defaultFilesOptions.DefaultFileNames.Clear();
-            defaultFilesOptions.DefaultFileNames.Add("foo.html");
-            //app.UseDefaultFiles(); // we can pass this defaultFileOption object to change default html page
-
-            app.UseFileServer(); // we can also configure this by FileServerOption object
+            
+            app.UseFileServer(); 
 
             app.UseRouting();
-            //app.UseStaticFiles();
-            
-
-            // UseFileServer combines the functionality of
-            // UseStaticFiles
-            // UseDefaultFiles
-            // UseDirectoryBrowser
+           
             app.Run(async (context) =>
             {
+                throw new Exception("Some error processing the request.");
                 await context.Response.WriteAsync("Hello World");
             });
 

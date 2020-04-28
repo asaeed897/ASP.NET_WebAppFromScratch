@@ -22,6 +22,6 @@ namespace ASP.NET_WebAppFromScratch
                 {
                     webBuilder.UseStartup<Startup>();
                 });
-        // 12. Static files Middleware
+        // 13. Developer Exception Page
     }
 }
