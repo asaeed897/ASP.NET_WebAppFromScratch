@@ -22,6 +22,6 @@ namespace ASP.NET_WebAppFromScratch
                 {
                     webBuilder.UseStartup<Startup>();
                 });
-        // 13. Developer Exception Page
+        // 14. Environment Variable
     }
 }

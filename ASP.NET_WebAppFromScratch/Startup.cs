@@ -30,20 +30,22 @@ namespace ASP.NET_WebAppFromScratch
         {
             if (env.IsDevelopment())
             {
-                DeveloperExceptionPageOptions developerExceptionPageOptions = new DeveloperExceptionPageOptions();
-                developerExceptionPageOptions.SourceCodeLineCount = 10;
-                app.UseDeveloperExceptionPage(developerExceptionPageOptions);
+                app.UseDeveloperExceptionPage();
             }
 
-            
-            app.UseFileServer(); 
+            app.UseStaticFiles();
+           // app.UseFileServer(); 
+
+           //We Set Environment Variable like
+           // ON Development Machine set in launchsetting.json
+           // ON Staging and Production Server Set in Operating System
+           // and if not set then it is Production by default
 
             app.UseRouting();
            
             app.Run(async (context) =>
             {
-                throw new Exception("Some error processing the request.");
-                await context.Response.WriteAsync("Hello World");
+                await context.Response.WriteAsync(env.EnvironmentName);
             });
 
             app.UseEndpoints(endpoints =>
