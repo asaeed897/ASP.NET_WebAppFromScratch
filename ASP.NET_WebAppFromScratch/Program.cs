@@ -22,6 +22,6 @@ namespace ASP.NET_WebAppFromScratch
                 {
                     webBuilder.UseStartup<Startup>();
                 });
-        // 10. Middleware Components
+        // 11. Configure Request processing pipeline
     }
 }
