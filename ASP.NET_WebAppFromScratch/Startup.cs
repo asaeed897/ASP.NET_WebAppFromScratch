@@ -26,34 +26,31 @@ namespace ASP.NET_WebAppFromScratch
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env,
-            ILogger<Startup> logger)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
 
+            DefaultFilesOptions defaultFilesOptions = new DefaultFilesOptions();
+            defaultFilesOptions.DefaultFileNames.Clear();
+            defaultFilesOptions.DefaultFileNames.Add("foo.html");
+            //app.UseDefaultFiles(); // we can pass this defaultFileOption object to change default html page
+
+            app.UseFileServer(); // we can also configure this by FileServerOption object
+
             app.UseRouting();
+            //app.UseStaticFiles();
+            
 
-            app.Use(async (context, next) =>
-            {
-                logger.LogInformation("MW1: Incoming Request");
-                await next();
-                logger.LogInformation("MW1: Outgoing Request");
-            });
-
-            app.Use(async (context, next) =>
-            {
-                logger.LogInformation("MW2: Incoming Request");
-                await next();
-                logger.LogInformation("MW2: Outgoing Request");
-            });
-
+            // UseFileServer combines the functionality of
+            // UseStaticFiles
+            // UseDefaultFiles
+            // UseDirectoryBrowser
             app.Run(async (context) =>
             {
-                await context.Response.WriteAsync("MW3: Request handled and response produced");
-                logger.LogInformation("MW3: Request handled and response produced");
+                await context.Response.WriteAsync("Hello World");
             });
 
             app.UseEndpoints(endpoints =>
