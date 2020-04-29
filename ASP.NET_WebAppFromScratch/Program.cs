@@ -22,6 +22,10 @@ namespace ASP.NET_WebAppFromScratch
                 {
                     webBuilder.UseStartup<Startup>();
                 });
-        // 14. Environment Variable
+        // 15. MVC in ASP.NET
+
+        // Model: Set of Classes that represent data + Logic to manage that data
+        // View: Contains the Display logic tp present Model data provided by the Controller
+        // Controller: Handles the http request, work with the model, and selects a view to render that model
     }
 }
