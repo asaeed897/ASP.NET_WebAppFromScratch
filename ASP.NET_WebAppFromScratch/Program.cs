@@ -22,9 +22,8 @@ namespace ASP.NET_WebAppFromScratch
                 {
                     webBuilder.UseStartup<Startup>();
                 });
-        // 17. AddMvc VS AddMvcCore
-        // AddMvc have all required MVC services
-        // AddMvcCore have only core services
+        // 18. Model in ASP.NET core MVC
+        
 
         
     }
