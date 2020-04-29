@@ -22,7 +22,12 @@ namespace ASP.NET_WebAppFromScratch
                 {
                     webBuilder.UseStartup<Startup>();
                 });
-        // 18. Model in ASP.NET core MVC
+        // 19. Dependency Injection
+
+        // To Register with Dependency Injection Container
+        // AddSinglton()
+        // AddTransient()
+        // AddScoped()
         
 
         
