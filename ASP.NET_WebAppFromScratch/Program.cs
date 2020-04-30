@@ -22,18 +22,12 @@ namespace ASP.NET_WebAppFromScratch
                 {
                     webBuilder.UseStartup<Startup>();
                 });
-        // 24. Passing data to View by ViewBag
+        // 25. Passing data to View by Strongly Typed View
 
-        // ViewBag VS ViewData
+        // Specify model type in the view using @model directive
 
-        // ViewBag is wrapper around ViewData
-        // Creates a loosely typed view
-        // ViewData uses string keys to store and retrieve data 
-        // ViewBag used dynamic properties to store and retrieve
-        // Resolved dynamically at runtime
-        // No compile - time type checking and Intellisens
-        // Preferred approach to pass data from a controller to a view is by using strongly Typed View
-
+        // To access the model object properties we Use @Model e.g. @Model.Name for name property
+        
 
 
 
