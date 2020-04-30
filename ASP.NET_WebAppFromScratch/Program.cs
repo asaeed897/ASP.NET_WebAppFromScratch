@@ -22,17 +22,14 @@ namespace ASP.NET_WebAppFromScratch
                 {
                     webBuilder.UseStartup<Startup>();
                 });
-        // 22. Customize View Discovery
+        // 23. Passing data to View by ViewData
 
-        // View() or View(Object model): Looks for a view file with the same name
-        // same name as the action method
-        // View(string viewName): 
-        // Looks for a view file with your own custom name: View("Test.cshtml")
-        // You can specify a View name or View file path View("MYViews/Test.cshtml")
-        // View file path can be absolute or relative
-        // With absolute path .cshtml extension must be specified("MYViews/Test.cshtml")
-        // with Relative path don't specify the file extension .cshtml: View("../MyVideo/Test")
+        // Three methods to pass data  1. ViewData  2. ViewBag  3. StronglyTyped View
 
+        // Dictionary of weakly typed objects
+        // Use string keys to store and retrieve data
+        // Dynamically resolved at runtime data 
+        // No compile - time type checking and Intellisens
 
 
 
