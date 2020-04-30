@@ -19,5 +19,10 @@ namespace ASP.NET_WebAppFromScratch.Controllers
         {
             return _employeeRepository.GetEmployee(1).Name;
         }
+        public ViewResult Details()
+        {
+            Employee model = _employeeRepository.GetEmployee(1);
+            return View(model);
+        }
     }
 }

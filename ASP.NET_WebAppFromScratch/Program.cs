@@ -22,12 +22,15 @@ namespace ASP.NET_WebAppFromScratch
                 {
                     webBuilder.UseStartup<Startup>();
                 });
-        // 19. Dependency Injection
+        // 20. Controller
 
-        // To Register with Dependency Injection Container
-        // AddSinglton()
-        // AddTransient()
-        // AddScoped()
+        // Handles the incoming http request
+        // Builds the model AND
+        // Return the model to the caller of we are building API OR
+        // Select a View and pass the model to the View
+        // The View then generates the required HTML to present the data
+
+       
         
 
         

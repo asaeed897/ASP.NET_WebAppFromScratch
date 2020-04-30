@@ -30,6 +30,7 @@ namespace ASP.NET_WebAppFromScratch
             services.AddMvc();
             MvcOptions mvcOptions = new MvcOptions { EnableEndpointRouting = false };
             */
+            services.AddMvc().AddXmlSerializerFormatters();
             services.AddControllers();
             services.AddSingleton<IEmployeeRepository, MockEmployeeRepository>();
         }
