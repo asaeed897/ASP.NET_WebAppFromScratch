@@ -22,13 +22,12 @@ namespace ASP.NET_WebAppFromScratch
                 {
                     webBuilder.UseStartup<Startup>();
                 });
-        // 20. Controller
+        // 21. Views
 
-        // Handles the incoming http request
-        // Builds the model AND
-        // Return the model to the caller of we are building API OR
-        // Select a View and pass the model to the View
-        // The View then generates the required HTML to present the data
+        // A view file has cshtml extension
+        // A view is an HTML template with embedded Razor markup
+        // Contains logic to display Model data
+       //  Convention for adding views e.g. for HomeController>>> Views\Home\{method_name of View}e.g. for details it details.cshtml
 
        
         
