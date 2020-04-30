@@ -22,14 +22,17 @@ namespace ASP.NET_WebAppFromScratch
                 {
                     webBuilder.UseStartup<Startup>();
                 });
-        // 23. Passing data to View by ViewData
+        // 24. Passing data to View by ViewBag
 
-        // Three methods to pass data  1. ViewData  2. ViewBag  3. StronglyTyped View
+        // ViewBag VS ViewData
 
-        // Dictionary of weakly typed objects
-        // Use string keys to store and retrieve data
-        // Dynamically resolved at runtime data 
+        // ViewBag is wrapper around ViewData
+        // Creates a loosely typed view
+        // ViewData uses string keys to store and retrieve data 
+        // ViewBag used dynamic properties to store and retrieve
+        // Resolved dynamically at runtime
         // No compile - time type checking and Intellisens
+        // Preferred approach to pass data from a controller to a view is by using strongly Typed View
 
 
 
