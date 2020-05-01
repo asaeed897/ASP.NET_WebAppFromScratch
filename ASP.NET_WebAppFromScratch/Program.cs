@@ -22,11 +22,14 @@ namespace ASP.NET_WebAppFromScratch
                 {
                     webBuilder.UseStartup<Startup>();
                 });
-        // 29. Sections in Layout Page
+        // 30. _ViewStart in ASP.NET Core MVC
 
-        // A Section in a Layout View provides a way to Organize where certain page elements should be placed 
-        // A Section can be optional or mandatory
-        // A Section in the layout view is rendered at the location where RenderSection() method is called
+        // Code in ViewStart is executed before the code in an individual view
+        // Move the Common code such as setting the Layout property to ViewStart
+        // ViewStart reduces code redundancy and improves maintainability
+        // ViewStart file is hierarchical So when we place a another _ViewStart file in any subfolder
+        // then it can override main _ViewStart file
+        // We can also set Layout property in specific view files to change their view if we want
 
 
 
