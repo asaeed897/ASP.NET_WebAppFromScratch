@@ -22,10 +22,9 @@ namespace ASP.NET_WebAppFromScratch
                 {
                     webBuilder.UseStartup<Startup>();
                 });
-        // 26. Passing data to View by View Model
+        // 27. List View 
 
-        // We create a "View Model" when a Model object does not contain all the
-        // data a view needs
+        
 
 
     }

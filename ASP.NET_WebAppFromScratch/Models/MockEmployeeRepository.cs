@@ -22,5 +22,10 @@ namespace ASP.NET_WebAppFromScratch.Models
         {
             return _employeeList.FirstOrDefault(e => e.Id == Id);
         }
+
+        public IEnumerable<Employee> GetAllEmployees()
+        {
+            return _employeeList;
+        }
     }
 }
