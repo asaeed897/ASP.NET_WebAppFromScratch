@@ -22,7 +22,14 @@ namespace ASP.NET_WebAppFromScratch
                 {
                     webBuilder.UseStartup<Startup>();
                 });
-        // 27. List View 
+        // 28. Layout View 
+
+        // Consistent look and behaviour for all the views in a web application
+        // Similar to master page in ASP.NET web forms
+        // File on the file system with .cshtml extension
+        // Default name is _Layout.cshtml
+        // Usually placed in Views/Shared folder
+        // An Application can have multiple layout views
 
         
 
