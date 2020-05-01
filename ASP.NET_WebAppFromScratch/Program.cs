@@ -22,16 +22,13 @@ namespace ASP.NET_WebAppFromScratch
                 {
                     webBuilder.UseStartup<Startup>();
                 });
-        // 28. Layout View 
+        // 29. Sections in Layout Page
 
-        // Consistent look and behaviour for all the views in a web application
-        // Similar to master page in ASP.NET web forms
-        // File on the file system with .cshtml extension
-        // Default name is _Layout.cshtml
-        // Usually placed in Views/Shared folder
-        // An Application can have multiple layout views
+        // A Section in a Layout View provides a way to Organize where certain page elements should be placed 
+        // A Section can be optional or mandatory
+        // A Section in the layout view is rendered at the location where RenderSection() method is called
 
-        
+
 
 
     }
