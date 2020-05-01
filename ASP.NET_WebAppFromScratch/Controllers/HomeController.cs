@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ASP.NET_WebAppFromScratch.Models;
+using ASP.NET_WebAppFromScratch.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ASP.NET_WebAppFromScratch.Controllers
@@ -21,9 +22,12 @@ namespace ASP.NET_WebAppFromScratch.Controllers
         }
         public ViewResult Details()
         {
-            Employee model = _employeeRepository.GetEmployee(1);
-            ViewBag.PageTitle = "Employee Details";
-            return View(model);
+            HomeDetailsViewModel homeDetailsViewModel = new HomeDetailsViewModel()
+            {
+                Employee = _employeeRepository.GetEmployee(1),
+                PageTitle = "Employee Details"
+            };
+            return View(homeDetailsViewModel);
         }
     }
 }

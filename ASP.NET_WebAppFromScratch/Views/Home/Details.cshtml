@@ -1,4 +1,4 @@
-﻿@model ASP.NET_WebAppFromScratch.Models.Employee
+﻿@model ASP.NET_WebAppFromScratch.ViewModels.HomeDetailsViewModel
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,17 +6,17 @@
 </head>
 <body>
 <h3>
-    @ViewBag.PageTitle
+    @Model.PageTitle
 </h3>
 
 <div>
-    Name: @Model.Name
+    Name: @Model.Employee.Name
 </div>
 <div>
-    Email: @Model.Email
+    Email: @Model.Employee.Email
 </div>
 <div>
-    Department:  @Model.Department
+    Department:  @Model.Employee.Department
 </div>
 </body>
 </html>

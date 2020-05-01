@@ -22,14 +22,10 @@ namespace ASP.NET_WebAppFromScratch
                 {
                     webBuilder.UseStartup<Startup>();
                 });
-        // 25. Passing data to View by Strongly Typed View
+        // 26. Passing data to View by View Model
 
-        // Specify model type in the view using @model directive
-
-        // To access the model object properties we Use @Model e.g. @Model.Name for name property
-        
-
-
+        // We create a "View Model" when a Model object does not contain all the
+        // data a view needs
 
 
     }
