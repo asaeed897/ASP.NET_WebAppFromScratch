@@ -22,15 +22,19 @@ namespace ASP.NET_WebAppFromScratch
                 {
                     webBuilder.UseStartup<Startup>();
                 });
-        // 30. _ViewStart in ASP.NET Core MVC
+        // 31. _ViewImports file in ASP.NET Core MVC
 
-        // Code in ViewStart is executed before the code in an individual view
-        // Move the Common code such as setting the Layout property to ViewStart
-        // ViewStart reduces code redundancy and improves maintainability
-        // ViewStart file is hierarchical So when we place a another _ViewStart file in any subfolder
-        // then it can override main _ViewStart file
-        // We can also set Layout property in specific view files to change their view if we want
-
+        // ViewImport file is placed in the Views folder
+        // Used to include the common namespaces
+        // To include the common namespaces use @using directive
+        // Other Supported directives
+        // @addTagHelper
+        // @removeTagHelper
+        // @tagHelperPrefix
+        // @model
+        // @inherits
+        // @inject
+        // ViewImports file is hierarchical just like viewStart
 
 
 
