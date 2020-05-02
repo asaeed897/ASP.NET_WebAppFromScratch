@@ -25,11 +25,6 @@ namespace ASP.NET_WebAppFromScratch
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-
-            /*
-            services.AddMvc();
-            MvcOptions mvcOptions = new MvcOptions { EnableEndpointRouting = false };
-            */
             services.AddMvc().AddXmlSerializerFormatters();
             services.AddControllers();
             services.AddSingleton<IEmployeeRepository, MockEmployeeRepository>();
@@ -53,20 +48,21 @@ namespace ASP.NET_WebAppFromScratch
                 await context.Response.WriteAsync("Hello World!");
             });*/
 
-            /*app.UseMvc(routes => {  // This the previous method of dotnet 2.2; Now we use method which I am using here below.
-                routes.MapRoute("default", "{controller=Home}/{action=Index}/{id?}");
-            });*/
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllerRoute(name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                // endpoints.MapControllerRoute(name: "default",
+                //     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+                endpoints.MapControllers(); // With this method we can use Attribute Routing
+
+
                 /*endpoints.MapGet("/", async context =>
                 {
                     await context.Response
                         .WriteAsync("Hello, World!");
                 });*/
-               
+
             });
         }
     }

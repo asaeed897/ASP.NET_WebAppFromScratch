@@ -22,11 +22,17 @@ namespace ASP.NET_WebAppFromScratch
                 {
                     webBuilder.UseStartup<Startup>();
                 });
-        // 32. Conventional Routing in ASP.NET Core MVC
+        // 33. Attributes Routing in ASP.NET Core MVC
 
-        // 
+        // With Attribute Routing, [Route] attribute is used to define the Routes
+        // Route attribute can be applied on the Controller or the Controller Action Methods
+        // With Attributes Routing, routes are placed next to the action methods that will actually use them
+        // Attributes routes offer a bit more flexibility than conventional routes
+        // Attribute Routes are also hierarchical like ViewStart
+        // We can also use [controller], [action] and [area] Tokens instead of using specific names
 
-
+        // Note: The controller route template is not combined with action method 
+        // route template if the on the action method begins with "/" or "~/"
 
     }
 }

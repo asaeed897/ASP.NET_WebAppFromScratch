@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ASP.NET_WebAppFromScratch.Controllers
 {
+    [Route("[controller]/[action]")]
     public class HomeController : Controller
     {
         private readonly IEmployeeRepository _employeeRepository;
@@ -16,16 +17,20 @@ namespace ASP.NET_WebAppFromScratch.Controllers
         {
             _employeeRepository = employeeRepository;
         }
+        [Route("~/")]
+        [Route("~/Home")]
         public ViewResult Index()
         {
             var model = _employeeRepository.GetAllEmployees();
             return View(model);
         }
-        public ViewResult Details(int id = 1)
+
+        [Route("{id?}")]
+        public ViewResult Details(int? id)
         {
             HomeDetailsViewModel homeDetailsViewModel = new HomeDetailsViewModel()
             {
-                Employee = _employeeRepository.GetEmployee(id),
+                Employee = _employeeRepository.GetEmployee(id??1),
                 PageTitle = "Employee Details"
             };
             return View(homeDetailsViewModel);
