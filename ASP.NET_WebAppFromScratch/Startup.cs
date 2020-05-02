@@ -46,8 +46,6 @@ namespace ASP.NET_WebAppFromScratch
             app.UseStaticFiles();
            // app.UseFileServer(); 
            
-          // app.UseMvcWithDefaultRoute();
-
             app.UseRouting();
            
             /*app.Run(async (context) =>
@@ -55,11 +53,14 @@ namespace ASP.NET_WebAppFromScratch
                 await context.Response.WriteAsync("Hello World!");
             });*/
 
+            /*app.UseMvc(routes => {  // This the previous method of dotnet 2.2; Now we use method which I am using here below.
+                routes.MapRoute("default", "{controller=Home}/{action=Index}/{id?}");
+            });*/
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
-
                 /*endpoints.MapGet("/", async context =>
                 {
                     await context.Response

@@ -22,19 +22,9 @@ namespace ASP.NET_WebAppFromScratch
                 {
                     webBuilder.UseStartup<Startup>();
                 });
-        // 31. _ViewImports file in ASP.NET Core MVC
+        // 32. Conventional Routing in ASP.NET Core MVC
 
-        // ViewImport file is placed in the Views folder
-        // Used to include the common namespaces
-        // To include the common namespaces use @using directive
-        // Other Supported directives
-        // @addTagHelper
-        // @removeTagHelper
-        // @tagHelperPrefix
-        // @model
-        // @inherits
-        // @inject
-        // ViewImports file is hierarchical just like viewStart
+        // 
 
 
 
