@@ -22,15 +22,13 @@ namespace ASP.NET_WebAppFromScratch
                 {
                     webBuilder.UseStartup<Startup>();
                 });
-        // 35. Tag Helpers in ASP.NET Core MVC
+        // 36. Why use Tag Helpers in ASP.NET Core MVC
 
-        // Some others methods which we can use instead of Tag Helper
-        // Manually generating links
-        // <a href ="/home/details/@employee.Id">View</a>
-        // HTML Helper
-        //  @Html.ActionLink("View", "details", "home", new { id= employee.Id}) Its creates entire href link
-        // <a href= "@Url.Action("View", "details", "home", new { id= employee.Id})" It return only string link
-        //           class="btn btn-primary">View</a>
+        // Tag helpers generate link based on Application route template
+        // its mean if change this template like below
+        // endpoints.MapControllerRoute(name: "default",
+        //       pattern: "Saeed/{controller=Home}/{action=Index}/{id?}");
+        // then Tag helper work here perfectly 
 
     }
 }
