@@ -10,4 +10,4 @@ namespace ASP.NET_WebAppFromScratch.Models
         public string Email { get; set; }
         public string Department { get; set; }
     }
-}
+ }

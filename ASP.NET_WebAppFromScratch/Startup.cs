@@ -51,10 +51,10 @@ namespace ASP.NET_WebAppFromScratch
 
             app.UseEndpoints(endpoints =>
             {
-                // endpoints.MapControllerRoute(name: "default",
-                //     pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapControllerRoute(name: "default",
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
 
-                endpoints.MapControllers(); // With this method we can use Attribute Routing
+               // endpoints.MapControllers(); // With this method we can use Attribute Routing
 
 
                 /*endpoints.MapGet("/", async context =>
