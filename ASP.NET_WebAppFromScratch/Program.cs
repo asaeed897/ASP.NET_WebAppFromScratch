@@ -22,9 +22,15 @@ namespace ASP.NET_WebAppFromScratch
                 {
                     webBuilder.UseStartup<Startup>();
                 });
-        // 34. Install and Use Bootstrap in ASP.NET Core MVC
+        // 35. Tag Helpers in ASP.NET Core MVC
 
-        // 
+        // Some others methods which we can use instead of Tag Helper
+        // Manually generating links
+        // <a href ="/home/details/@employee.Id">View</a>
+        // HTML Helper
+        //  @Html.ActionLink("View", "details", "home", new { id= employee.Id}) Its creates entire href link
+        // <a href= "@Url.Action("View", "details", "home", new { id= employee.Id})" It return only string link
+        //           class="btn btn-primary">View</a>
 
     }
 }
