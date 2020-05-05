@@ -21,14 +21,13 @@ namespace ASP.NET_WebAppFromScratch
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
-                });
-        // 36. Why use Tag Helpers in ASP.NET Core MVC
+                }); 
+        // 37. Image Tag Helper in ASP.NET Core MVC
 
-        // Tag helpers generate link based on Application route template
-        // its mean if change this template like below
-        // endpoints.MapControllerRoute(name: "default",
-        //       pattern: "Saeed/{controller=Home}/{action=Index}/{id?}");
-        // then Tag helper work here perfectly 
+        // Image Tag Helper enhance the <img> tag to provide cache-busting behaviour
+        // for static image files
+        // Based on the content of the image , a unique hash value is calculated and appended Image URL
+        // Each time the image on the server changes a new hash value is calculated and cached
 
     }
 }
