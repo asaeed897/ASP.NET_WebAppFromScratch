@@ -22,18 +22,8 @@ namespace ASP.NET_WebAppFromScratch
                 {
                     webBuilder.UseStartup<Startup>();
                 }); 
-        // 38. Environment Tag Helper in ASP.NET Core MVC
+        // 39. Bootstrap navigation menu in ASP.NET Core MVC
 
-        // If we use these environment tag helper just like I did in layout file
-        // Then our application download bootstrap file from CDN in case of staging or production environment
-        // or if CDN server is down
-        // and in Development environment it download this from our own server
-        // Here integrity attribute on the <Link> element is used for Subresource 
-        // integrity (SRI )check
-        // Fallback Source used where bootstrap file didn't download properly and
-        // then we want our app to download that from our own server
-        // asp-fallback-href attribute use to specify a fallback source
-        // And asp-suppress-fallback-integrity attribute use to turn off integrity
-        // check for files downloaded from fallback source
+        // 
     }
 }
