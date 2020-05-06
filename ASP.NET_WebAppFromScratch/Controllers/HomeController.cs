@@ -32,5 +32,9 @@ namespace ASP.NET_WebAppFromScratch.Controllers
             };
             return View(homeDetailsViewModel);
         }
+        public ViewResult Create()
+        {
+            return View();
+        }
     }
 }

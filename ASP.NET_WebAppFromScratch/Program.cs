@@ -22,7 +22,7 @@ namespace ASP.NET_WebAppFromScratch
                 {
                     webBuilder.UseStartup<Startup>();
                 }); 
-        // 39. Bootstrap navigation menu in ASP.NET Core MVC
+        // 40. Form tag helpers in ASP.NET Core MVC
 
         // 
     }
