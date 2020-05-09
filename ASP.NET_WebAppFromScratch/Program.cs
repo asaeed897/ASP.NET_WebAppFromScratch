@@ -22,8 +22,12 @@ namespace ASP.NET_WebAppFromScratch
                 {
                     webBuilder.UseStartup<Startup>();
                 }); 
-        // 40. Form tag helpers in ASP.NET Core MVC
+        // 41. Model Binding ASP.NET Core MVC
 
-        // 
+        // To bind the request to the controller action method parameters, model binding
+        // looks for the data in the HTTP request in following order
+        // Form Values
+        // Route Values
+        // Query Strings
     }
 }
