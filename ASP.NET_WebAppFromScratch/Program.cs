@@ -22,12 +22,10 @@ namespace ASP.NET_WebAppFromScratch
                 {
                     webBuilder.UseStartup<Startup>();
                 }); 
-        // 41. Model Binding ASP.NET Core MVC
+        // 42. ASP.NET Core model Validation
 
-        // To bind the request to the controller action method parameters, model binding
-        // looks for the data in the HTTP request in following order
-        // Form Values
-        // Route Values
-        // Query Strings
+        // Apply Validation Attribute on properties
+        // Use ModelState.IsValid property to check is validation has failed or succeeded
+        // Use asp-validation-for and asp-validation-summary tag helpers to display validation errors 
     }
 }
