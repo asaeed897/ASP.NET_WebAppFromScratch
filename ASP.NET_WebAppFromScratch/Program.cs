@@ -22,10 +22,8 @@ namespace ASP.NET_WebAppFromScratch
                 {
                     webBuilder.UseStartup<Startup>();
                 }); 
-        // 42. ASP.NET Core model Validation
+        // 43. Select List Validation
 
-        // Apply Validation Attribute on properties
-        // Use ModelState.IsValid property to check is validation has failed or succeeded
-        // Use asp-validation-for and asp-validation-summary tag helpers to display validation errors 
+        // 
     }
 }
