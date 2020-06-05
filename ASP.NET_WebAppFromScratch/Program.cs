@@ -21,9 +21,11 @@ namespace ASP.NET_WebAppFromScratch
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
-                }); 
-        // 45. Introduction to entity framework core
+                });
+        // 46. Install Entity Framework core
 
-        // Database first and Code first Approch
+        // EntityFrameworkCore has dependency on EntityFrameworkCore.Relational
+        // and EntityFrameworkCore.Relational han dependency on EntityFrameworkCore.SqlServer
+        // thats why we install EntityFrameworkCore.SqlServer and that will install remaining 2 itself.
     }
 }  
