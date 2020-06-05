@@ -22,8 +22,19 @@ namespace ASP.NET_WebAppFromScratch
                 {
                     webBuilder.UseStartup<Startup>();
                 }); 
-        // 43. Select List Validation
+        // 44. AddSingleton vs AddScoped vs AddTransient
 
-        // 
+        // AddSingleton
+        // With a singleton service, there is only a single instance. An instance is
+        // created, when the service is first requested and that single instance is used
+        // by all http requests throughout the application.
+
+        // AddScoped
+        // With a scoped service we get the same instance within the scope of a given http
+        // request but a new instance across different http requests.
+
+        // AddTransient
+        // With a transient service a new instance is provided every time an instance is requested
+        // whether it is in the scope of the same http request or across different http requests.
     }
-}
+}  

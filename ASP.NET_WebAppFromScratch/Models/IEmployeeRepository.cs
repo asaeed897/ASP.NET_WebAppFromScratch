@@ -8,4 +8,4 @@ namespace ASP.NET_WebAppFromScratch.Models
         IEnumerable<Employee> GetAllEmployees();
         Employee Add(Employee employee);
     }
-}
+} 
