@@ -22,8 +22,10 @@ namespace ASP.NET_WebAppFromScratch
                 {
                     webBuilder.UseStartup<Startup>();
                 });
-        // 49. Repository Pattern in ASP.NET Core
+        // 50. Entity Framework Core Migrations
 
-        // 
+        // get-help about_entityframeworkcore
+        // Add-Migration: Adds a new migration
+        // Update-Database: Update the database to a specified migration
     }
 }  
