@@ -22,10 +22,13 @@ namespace ASP.NET_WebAppFromScratch
                 {
                     webBuilder.UseStartup<Startup>();
                 });
-        // 46. Install Entity Framework core
+        // 47. DbContext in Entity Framework core
 
-        // EntityFrameworkCore has dependency on EntityFrameworkCore.Relational
-        // and EntityFrameworkCore.Relational han dependency on EntityFrameworkCore.SqlServer
-        // thats why we install EntityFrameworkCore.SqlServer and that will install remaining 2 itself.
+        // The DbContext class includes a DbSet<TEntity> property
+        // for each entity in the model
+        // we will use this DBSet property Employees to query and save
+        // instances of the Employee Class
+        // The LINQ queries against the DbSet<TEntity> will be translated into
+        // queries against the underlying database
     }
 }  
