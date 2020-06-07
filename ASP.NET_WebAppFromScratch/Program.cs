@@ -22,13 +22,13 @@ namespace ASP.NET_WebAppFromScratch
                 {
                     webBuilder.UseStartup<Startup>();
                 });
-        // 47. DbContext in Entity Framework core
+        // 48. Using Sql Server with entity framework core
 
-        // The DbContext class includes a DbSet<TEntity> property
-        // for each entity in the model
-        // we will use this DBSet property Employees to query and save
-        // instances of the Employee Class
-        // The LINQ queries against the DbSet<TEntity> will be translated into
-        // queries against the underlying database
+        // Trusted_Connection=true
+        // Integrated Security = SSPI
+        // Integrated Security = true
+
+        // These all the 3 setting specify the same thing
+        // Use integrated windows Authentication instead SQL Server authentication
     }
 }  
