@@ -3,14 +3,16 @@ using ASP.NET_WebAppFromScratch.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ASP.NET_WebAppFromScratch.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200607194103_SeedEmployeesTable")]
+    partial class SeedEmployeesTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -52,23 +54,9 @@ namespace ASP.NET_WebAppFromScratch.Migrations
                         new
                         {
                             Id = 2,
-                            Department = 1,
+                            Department = 2,
                             Email = "asim__7@gmail.com",
                             Name = "Asim"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Department = 2,
-                            Email = "mustensar__7@gmail.com",
-                            Name = "Mustensar"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Department = 1,
-                            Email = "ayesha__7@gmail.com",
-                            Name = "Ayesha"
                         });
                 });
 #pragma warning restore 612, 618

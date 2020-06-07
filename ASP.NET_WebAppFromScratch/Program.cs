@@ -22,10 +22,8 @@ namespace ASP.NET_WebAppFromScratch
                 {
                     webBuilder.UseStartup<Startup>();
                 });
-        // 50. Entity Framework Core Migrations
+        // 51. Entity Framework Core Seed Data
 
-        // get-help about_entityframeworkcore
-        // Add-Migration: Adds a new migration
-        // Update-Database: Update the database to a specified migration
+        // We create Seed static method to make our AppDbContext Class clean.
     }
 }  
