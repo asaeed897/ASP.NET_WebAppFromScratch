@@ -22,13 +22,8 @@ namespace ASP.NET_WebAppFromScratch
                 {
                     webBuilder.UseStartup<Startup>();
                 });
-        // 48. Using Sql Server with entity framework core
+        // 49. Repository Pattern in ASP.NET Core
 
-        // Trusted_Connection=true
-        // Integrated Security = SSPI
-        // Integrated Security = true
-
-        // These all the 3 setting specify the same thing
-        // Use integrated windows Authentication instead SQL Server authentication
+        // 
     }
 }  

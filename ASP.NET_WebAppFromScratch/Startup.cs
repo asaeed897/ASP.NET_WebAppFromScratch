@@ -30,7 +30,7 @@ namespace ASP.NET_WebAppFromScratch
                 options => options.UseSqlServer(_config.GetConnectionString("EmployeeDBConnection")));
             services.AddMvc().AddXmlSerializerFormatters();
             services.AddControllers();
-            services.AddSingleton<IEmployeeRepository, MockEmployeeRepository>();
+            services.AddScoped<IEmployeeRepository, SQLEmployeeRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
